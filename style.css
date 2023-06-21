@@ -1,0 +1,207 @@
+/* A declaração abaixo mexe em todos os elementos*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(/assets/bg-mobile.jpg);
+  --stroke-color: white;
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.179);
+  --switch-bg-url: url(/assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(/assets/bg-mobile-light.jpg);
+  --stroke-color: black;
+  --surface-color: white;
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: slategrey;
+  --switch-bg-url: url(/assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /* ABAIXO: Exemplo de agrupamento dos códigos no comentário acima
+  caso não tenha um atributo é só "pular" ele e digitar o próximo*/
+
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* PROFILE */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* SWITCH BUTTON*/
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  animation: slidingback 0.4s;
+}
+
+#switch span {
+  display: block;
+  border-radius: 9999px;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.light #switch button {
+  animation: slider 0.4s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+/* Lista de Links */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+ul li a {
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--surface-color);
+  padding: 16px 24px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+/*Pseudo Seletor HOVER, muda o comportamento do item quando passa o mouse
+em cima.*/
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/*links de redes sociais*/
+
+#socialmedia {
+  display: flex;
+  padding: 24px;
+  font-size: 25px;
+  justify-content: center;
+}
+
+#socialmedia a {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  justify-content: center;
+  transition: all 0.5s;
+  border-radius: 50%;
+}
+
+#socialmedia a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  transition: all 0.5s;
+  color: --var(--text-color);
+  font-size: 14px;
+}
+
+footer:hover {
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(/assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(/assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animação*/
+@keyframes slider {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+/*animação 2*/
+@keyframes slidingback {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0%;
+  }
+}
