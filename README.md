@@ -1,4 +1,4 @@
-<h1 align="center"> LinkTree do Cuca </h1>
+<h1 align="center"> Link Everything </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -13,11 +13,7 @@
 
 <br>
 
-<p align="center">
-  <img alt="projeto DevLinks" src=".github/preview.jpg" width="100%">
-</p>
-
-## 🚀 Tecnologias
+## Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -26,9 +22,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Git e Github
 - Figma
 
-## 💻 Projeto
+## Projeto
 
-O DevLinks é um agregador de links para usar como cartão de visitas online.
+O DevLinks é um agregador de links para usar como cartão de visitas online. O Link Everything é um projeto feito no curso Discover da RocketSeat e vai ser modificado com tempo conforme eu for adquirindo novas habilidades.
 
 ## :memo: Licença
 
