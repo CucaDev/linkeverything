@@ -147,7 +147,7 @@ ul li a:hover {
 
 #socialmedia {
   display: flex;
-  padding: 24px;
+  padding: 24px 0;
   font-size: 25px;
   justify-content: center;
 }
